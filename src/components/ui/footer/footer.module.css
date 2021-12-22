@@ -1,0 +1,13 @@
+.store__footer {
+    display: flex;
+    justify-content: center;
+    background-color: #363a45;
+    color: white;
+    font-size: 0.8em;
+    height: 50px;
+    padding: 0;
+}
+
+.store__footer-content {
+    align-self: center;
+}
