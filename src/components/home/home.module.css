@@ -1,0 +1,11 @@
+.store__home {
+    height: 100%;
+    padding: 1rem;
+}
+
+.store__home-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 0.5rem;
+    place-items: center;
+}
