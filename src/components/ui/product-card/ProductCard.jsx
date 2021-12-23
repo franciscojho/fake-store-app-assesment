@@ -1,25 +1,45 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { productType, defaultProduct } from './propTypes'
 import styles from './productCard.module.css'
 
+const getRandomNum = () => (Math.floor(Math.random() * 3) + 1) * 2
+
 const ProductCard = ({ product }) => {
+    const [counter, setCounter] = useState(getRandomNum())
+    const [isOpen, setIsOpen] = useState(true)
+
+    useEffect(() => {
+        if (counter > 0) setTimeout(() => setCounter(counter - 1), 1000)
+        else setIsOpen(false)
+    }, [counter])
+
     return (
         <div className={styles.store__productcard}>
-            <img
-                className={styles['store__productcard-img']}
-                width={200}
-                height={200}
-                src={product.image}
-                alt=""
-            />
+            <p className={styles['store__productcard-counter']}>
+                {isOpen ? (
+                    <>
+                        Open for: <br />
+                        {counter}s
+                    </>
+                ) : (
+                    <>Closed</>
+                )}
+            </p>
+            <img className={styles['store__productcard-img']} src={product.image} alt="" />
             <div className={styles['store__productcard-body']}>
                 <p className={styles['store__productcard-title']}>{product.title}</p>
-                {/* <p className={styles['store__productcard-desc']}>{product.description}</p> */}
+                <p className={styles['store__productcard-desc']}>{product.description}</p>
             </div>
             <div className={styles['store__productcard-footer']}>
-                <button className={styles['store__productcard-button']} type="button">
-                    See Details
-                </button>
+                <Link
+                    className={`${styles['store__productcard-link']} ${
+                        !isOpen ? styles['store__productcard-link--disabled'] : ''
+                    }`}
+                    to={`/products/${product.id}`}
+                >
+                    See more..
+                </Link>
             </div>
         </div>
     )
