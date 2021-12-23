@@ -10,9 +10,9 @@ export const productType = {
         rating: PropTypes.shape({
             rate: PropTypes.number,
             count: PropTypes.number,
-        }),
+        }).isRequired,
         title: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
 }
 
 export const defaultProduct = {
