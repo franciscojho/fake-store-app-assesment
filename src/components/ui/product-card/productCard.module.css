@@ -9,11 +9,23 @@
     min-height: 300px;
     max-width: 300px;
     padding: 1rem;
+    position: relative;
     overflow: hidden;
+}
+
+.store__productcard-counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.6rem;
+    margin: 0.5rem;
+    font-weight: 600;
 }
 
 .store__productcard-img {
     align-self: center;
+    height: 150px;
+    width: 150px;
     object-fit: contain;
 }
 
@@ -45,6 +57,16 @@
     display: flex;
     align-items: end;
     flex-grow: 1;
+}
+
+.store__productcard-link {
+    text-decoration: none;
+    color: black;
+}
+
+.store__productcard-link--disabled {
+    pointer-events: none;
+    color: gray;
 }
 
 .store__productcard-button {
