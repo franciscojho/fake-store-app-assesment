@@ -25,15 +25,6 @@ const Navbar = () => {
                         ABOUT
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink
-                        className={`${styles['store__navbar-item']} ${({ isActive }) =>
-                            isActive ? 'nav-active' : ''}`}
-                        to="/product"
-                    >
-                        PRODUCT DETAIL
-                    </NavLink>
-                </li>
             </ul>
         </nav>
     )
