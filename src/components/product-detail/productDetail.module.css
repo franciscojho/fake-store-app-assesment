@@ -6,7 +6,6 @@
     margin-right: auto;
     max-width: 800px;
     place-items: center;
-    /* max-height: 600px; */
 }
 
 .store__prod-detail-rating {
@@ -21,7 +20,7 @@
 }
 
 .store__prod-detail-content {
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 .store__prod-detail-title {
