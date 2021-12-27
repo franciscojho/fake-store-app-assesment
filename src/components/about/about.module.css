@@ -30,6 +30,10 @@
     font-weight: 100;
 }
 
+.store__about-login-link {
+    text-decoration: none;
+}
+
 .store__about-bio {
     /* margin-top: 25px; */
 }
@@ -42,9 +46,6 @@
 .store__about-details {
     list-style-type: none;
     padding: 0;
-}
-
-.detail {
 }
 
 .icon {
