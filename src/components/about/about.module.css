@@ -1,3 +1,52 @@
 .store__about {
-    height: 100%;
+    padding: 1rem;
+    grid-area: main;
+}
+
+.store__about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.store__about-info {
+    max-width: 250px;
+    padding: 1rem;
+}
+
+.store__about-avatar {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.store__about-name {
+    margin: 0;
+}
+
+.store__about-login {
+    margin: 0;
+    font-weight: 100;
+}
+
+.store__about-bio {
+    /* margin-top: 25px; */
+}
+
+.store__about-learnings {
+    list-style-type: none;
+    padding: 0;
+}
+
+.store__about-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detail {
+}
+
+.icon {
+    width: 20px;
 }
