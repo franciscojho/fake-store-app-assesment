@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { productType, defaultProduct } from './propTypes'
 import styles from './productCard.module.css'
 
-const getRandomNum = () => (Math.floor(Math.random() * 3) + 1) * 2
+const getRandomNum = () => (Math.floor(Math.random() * 10) + 1) * 10
 
 const ProductCard = ({ product }) => {
     const [counter, setCounter] = useState(getRandomNum())
@@ -19,12 +18,19 @@ const ProductCard = ({ product }) => {
             <p className={styles['store__productcard-counter']}>
                 {isOpen ? (
                     <>
-                        Open for: <br />
+                        Deal expires in: <br />
                         {counter}s
                     </>
                 ) : (
-                    <>Closed</>
+                    <>Expired</>
                 )}
+            </p>
+            <p
+                className={`${styles['store__productcard-price']} ${
+                    !isOpen ? styles['store__productcard-price--expired'] : ''
+                }`}
+            >
+                ${product.price}
             </p>
             <img className={styles['store__productcard-img']} src={product.image} alt="" />
             <div className={styles['store__productcard-body']}>
@@ -37,20 +43,13 @@ const ProductCard = ({ product }) => {
                         !isOpen ? styles['store__productcard-link--disabled'] : ''
                     }`}
                     to={`/products/${product.id}`}
+                    state={{ product }}
                 >
                     See more..
                 </Link>
             </div>
         </div>
     )
-}
-
-ProductCard.propTypes = {
-    product: productType,
-}
-
-ProductCard.defaultProps = {
-    product: defaultProduct,
 }
 
 export default ProductCard

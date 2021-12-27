@@ -18,8 +18,22 @@
     top: 0;
     left: 0;
     font-size: 0.6rem;
-    margin: 0.5rem;
+    margin: 0.8rem;
     font-weight: 600;
+}
+
+.store__productcard-price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.8rem;
+    margin: 0.8rem;
+    font-weight: bold;
+    color: red;
+}
+
+.store__productcard-price--expired {
+    text-decoration: line-through;
 }
 
 .store__productcard-img {
@@ -55,13 +69,14 @@
 
 .store__productcard-footer {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     flex-grow: 1;
 }
 
 .store__productcard-link {
     text-decoration: none;
     color: black;
+    font-weight: 500;
 }
 
 .store__productcard-link--disabled {
