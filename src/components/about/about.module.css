@@ -1,6 +1,7 @@
 .store__about {
     padding: 1rem;
     grid-area: main;
+    font-size: 0.8rem;
 }
 
 .store__about-container {
