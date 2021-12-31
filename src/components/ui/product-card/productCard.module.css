@@ -58,13 +58,12 @@
 .store__productcard-desc {
     margin: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     max-width: 100%;
-    text-align: justify;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
 }
 
 .store__productcard-footer {
